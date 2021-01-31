@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Welcome to WowCars.in | Your one stop destination for used cars</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/bootstrap.min.css' %}?{% now "U" %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/font-awesome.css' %}?{% now "U" %}">
+
+    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}?{% now "U" %}">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">Wow <em>  Cars</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/" class="active">Home</a></li>
+                            <li><a href="/cars">Cars</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li> 
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <video autoplay muted loop id="bg-video">
+            <source src="static/assets/images/video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6 class="marginheading">Welcome to Wow Cars</h6>
+                <h2>Best <em>car dealer</em> in town!</h2>
+                <div class="main-button">
+                    <a href="/cars">Shop Cars</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+   <!-- ***** Cars Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Featured <em>Cars</em></h2>
+                        <img src="static/assets/images/line-dec.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for product in products|slice:"0:3" %}
+                <div class="col-lg-4">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="/media/{{product.image_1}}" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>
+                                <h3> &#x20b9;{{product.product_price}}</h3>
+                            </span>
+
+                            <h4>{{product.product_name}}</h4>
+
+                            <p>
+                                <i class="fa fa-dashboard"></i> {{product.kilometers_driven}} km &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-cube"></i> {{product.fuel}} &nbsp;&nbsp;&nbsp;
+                                <i class="fa fa-cog"></i> {{product.year}}  &nbsp;&nbsp;&nbsp;
+                            </p>
+
+                            <ul class="social-icons">
+                                <li><a href="/cardetails/{{product.id}}">+ View Car</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+        </div>
+    </section>
+    <!-- ***** Cars Ends ***** -->
+
+    <section class="section section-bg" id="schedule" style="background-image: url(static/assets/images/about-fullscreen-1-1920x700.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading dark-bg">
+                        <h2>Read <em>About Us</em></h2>
+                        <img src="static/assets/images/line-dec.png" alt="">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cta-content text-center">
+                        <p class="myparagraph">
+                            Welcome to Wowcars.in, your number one source for all things car. We're dedicated to providing you the very best of cars, with an emphasis on quality, price and service.</p>
+                            
+                            
+                           <p class="myparagraph"> Founded in 2020 by Mr.Manish Kumar Singh and Mr.Rishi Bhadauria, WowCars.in has come a long way from its beginnings in Kanpur, Uttar Pradesh. When the founders first started out, their passion for cars drove them to start their own business.</p>
+                            
+                            
+                          <p class="myparagraph">  We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+                            
+                            
+                           <h5 class="myheadings"> Sincerely,</h5>
+                            
+                           <h4 class="myheadings mt-4">Manish Kumar Singh</h3>
+                           <h4 class="myheadings">Rishi Bhadauria</h3>
+                            
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section my-4 section-bg" id="call-to-action" style="background-image: url(/static/assets/images/banner-image-1-1920x500.jpg)" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <h2>Send us a <em>message</em></h2>  
+                        <p>Thank you very much for your interest in our company and our services and if you have any questions, please write us a message now!</p> 
+                        <div class="main-button my-4">
+                            <a href="/contact">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                       All Rights Reserved | Copyright © 2021 WowCars.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ <!-- jQuery -->
+    <script src="{% static '/assets/js/jquery-2.1.0.min.js' %}?{% now "U" %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static '/assets/js/popper.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/bootstrap.min.js' %}?{% now "U" %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static '/assets/js/scrollreveal.min.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/waypoints.min.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/jquery.counterup.min.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/imgfix.min.js' %}?{% now "U" %}"></script> 
+    <script src="{% static '/assets/js/mixitup.js' %}?{% now "U" %}"></script> 
+    <script src="{% static '/assets/js/accordions.js' %}?{% now "U" %}"></script>
+    
+    <!-- Global Init -->
+    <script src="{% static '/assets/js/custom.js' %}?{% now "U" %}"></script>
+
+  </body>
+</html>

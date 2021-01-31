@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Welcome to WowCars.in | Your one stop destination for used cars</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/bootstrap.min.css' %}?{% now "U" %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/font-awesome.css' %}?{% now "U" %}">
+
+    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}?{% now "U" %}">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">Wow<em> cars</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/cars" class="active">Cars</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li> 
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Call to Action Start ***** -->
+    <!-- <section class="section section-bg" id="call-to-action" style="background-image: url(/static/assets/images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <br>
+                        <br>
+                        <h2><small><del>&#x20b9;310000</del></small> <em>&#x20b9;290000</em></h2>
+                        <p>BMW X-Series 500-D.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Fleet Starts ***** -->
+    <section class="section my-4" id="trainers">
+        <div class="container">
+            <br>
+            <br>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_1}}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_2}}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_3}}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_4}}" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_5}}" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_6}}" alt="Sixth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_7}}" alt="Seventh slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_8}}" alt="Eighth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_9}}" alt="Ninth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 myimg" src="/media/{{product.image_10}}" alt="Tenth slide">
+                </div>
+              </div>
+
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="cta-content text-center">
+            <h2 class="my-3"><span class="deletedprice" id="namespan">{{product.product_name}}</span><br></small> <em>&#x20b9;{{product.product_price}}</em></h2>
+            <button class="btn btn-primary mx-4 my-2 mybtnnew"  ><a target="_blank" href="tel:7985275306">Call Seller</a></button>
+            <button class="btn btn-primary mx-4 my-2 mybtnnew" ><a target="_blank" id="whatsappbtn" href="https://api.whatsapp.com/send?phone=9839288005&text=Hi! I am interested in {{product.product_name}}">Chat with Seller</a></button>
+          </div>
+            <br>
+            <br>
+
+            <div class="row" id="tabs">
+              <div class="col-lg-4">
+                <ul>
+                  <li><a href='#tabs-2'><i class="fa fa-info-circle"></i> Vehicle Description</a></li>
+                  <li><a href='#tabs-4'><i class="fa fa-phone"></i> Contact Details</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-8">
+                <section class='tabs-content' style="width: 100%;">
+                  <article id='tabs-2'>
+                    <h4 id="smallfonth4">Vehicle Description</h4>
+                    
+                    <p>{{product.product_description}}</p> 
+                   </article>
+                  <article id='tabs-4'>
+                    <h4>Contact Details</h4>
+
+                    <div class="row">   
+                        <div class="col-sm-6">
+                            <label>Name</label>
+
+                            <p>Manish Kumar Singh</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Phone</label>
+
+                            <p>7985275306 </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Whatsapp Number</label>
+                            <p>9839288005 </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Email</label>
+                            <p><a href="mailto:wowcars2020@gmail.com">wowcars2020@gmail.com</a></p>
+                        </div>
+                      </div>
+                    </article>
+                </section>
+              </div>
+            </div>
+          </div>
+      </section>
+    <!-- ***** Fleet Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                       All Rights Reserved | Copyright © 2021 WowCars.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="{% static '/assets/js/jquery-2.1.0.min.js' %}?{% now "U" %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static '/assets/js/popper.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/bootstrap.min.js' %}?{% now "U" %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static '/assets/js/scrollreveal.min.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/waypoints.min.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/jquery.counterup.min.js' %}?{% now "U" %}"></script>
+    <script src="{% static '/assets/js/imgfix.min.js' %}?{% now "U" %}"></script> 
+    <script src="{% static '/assets/js/mixitup.js' %}?{% now "U" %}"></script> 
+    <script src="{% static '/assets/js/accordions.js' %}?{% now "U" %}"></script>
+    <!-- Global Init -->
+    <script src="{% static '/assets/js/custom.js' %}?{% now "U" %}"></script>
+
+
+  </body>
+</html>
