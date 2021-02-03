@@ -1,66 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <title>Welcome to WowCars.in | Your one stop destination for used cars</title>
-     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/bootstrap.min.css' %}?{% now "U" %}">
-
-    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/font-awesome.css' %}?{% now "U" %}">
-
-    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}?{% now "U" %}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    </head>
-    
-    <body>
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo">Wow<em> cars</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/cars">Cars</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact" class="active">Contact</a></li> 
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
     <section class="section section-bg" id="call-to-action" style="background-image: url(/static/assets/images/banner-image-1-1920x500.jpg)">
       <div class="container">
         <div class="row">
@@ -199,20 +139,9 @@
         </div>
     </section>
     <!-- ***** Contact Us Area Ends ***** -->
-    
-    <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>
-                      All Rights Reserved | Copyright © 2021 WowCars.in
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    {% endblock body %}
+   
+{% block js %}
     <!-- jQuery -->
     <script src="{% static '/assets/js/jquery-2.1.0.min.js' %}?{% now "U" %}"></script>
 
@@ -229,6 +158,6 @@
     <script src="{% static '/assets/js/accordions.js' %}?{% now "U" %}"></script>
     <!-- Global Init -->
     <script src="{% static '/assets/js/custom.js' %}?{% now "U" %}"></script>
-
+{% endblock js %}
   </body>
 </html>
